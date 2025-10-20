@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CarsApplication<cars>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.edu.ifpr.cars.CarsApplication",
+            "projectName": "cars",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
