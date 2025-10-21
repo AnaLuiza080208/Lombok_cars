@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CarsApplication",
+            "request": "launch",
+            "mainClass": "br.edu.ifpr.cars.CarsApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-CarsApplication<cars>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

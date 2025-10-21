@@ -10,22 +10,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Driver {
+public class Passenger{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    LocalDate birthDate;
-
-    public Driver() {
-        
-    }
-
-    public Driver(LocalDate birthDate, Long id, String name) {
-        this.birthDate = birthDate;
-        this.id = id;
-        this.name = name;
-    }
+    String email;
 
     public Long getId() {
         return id;
@@ -43,12 +33,12 @@ public class Driver {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public String getEmail() {
+        return email;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }
