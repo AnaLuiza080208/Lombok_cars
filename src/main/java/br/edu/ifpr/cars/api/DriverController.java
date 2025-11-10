@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import br.edu.ifpr.cars.domain.Driver;
 import br.edu.ifpr.cars.domain.DriverRepository;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PutMapping;
+import jakarta.validation.Valid;
 
 @Service
 @RestController
@@ -43,11 +43,10 @@ public class DriverController {
          );
      }
 
-     @PostMapping("/drivers")
-     public Driver createDriver(@RequestBody Driver driver){
-        return driverRepository.save(driver);
-     }
-
+   @PostMapping("/drivers")
+   public Driver createDriver(@Valid @RequestBody Driver driver) {
+      return driverRepository.save(driver);
+}
      //update
      @PutMapping("/drivers/{id}")
      public Driver fullUpdateDriver(@PathVariable("id") Long id, @RequestBody Driver driver){
