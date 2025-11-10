@@ -6,3 +6,5 @@
 /save/Lombok_cars/src/main/java/br/edu/ifpr/cars/domain/DriverRepository.java
 /save/Lombok_cars/src/main/java/br/edu/ifpr/cars/domain/Passenger.java
 /save/Lombok_cars/src/main/java/br/edu/ifpr/cars/domain/PassengerRepository.java
+/save/Lombok_cars/src/main/java/br/edu/ifpr/cars/validate/Impar.java
+/save/Lombok_cars/src/main/java/br/edu/ifpr/cars/validate/ImparValidator.java
